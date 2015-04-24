@@ -26,6 +26,7 @@ namespace Homework1.Models
         [DataType(DataType.EmailAddress, ErrorMessage = "E-mail is not valid")]
         public string Email { get; set; }
         [Required]
+        [RegularExpression(@"\d{4}-\d{6}", ErrorMessage = "Phone Number is not valid")]
         public string 手機 { get; set; }
         [Required]
         public string 電話 { get; set; }
