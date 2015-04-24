@@ -28,6 +28,7 @@ namespace Homework1.Models
         public string 帳戶名稱 { get; set; }
         [Required]
         public string 帳戶號碼 { get; set; }
+        public bool isDelete { get; set; }
     
         public virtual 客戶資料 客戶資料 { get; set; }
     }

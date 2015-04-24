@@ -114,8 +114,8 @@ namespace Homework1.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            客戶銀行資訊 客戶銀行資訊 = db.客戶銀行資訊.Find(id);
-            db.客戶銀行資訊.Remove(客戶銀行資訊);
+            var 客戶銀行資訊 = db.客戶銀行資訊.Find(id);
+            客戶銀行資訊.isDelete = true;
             db.SaveChanges();
             return RedirectToAction("Index");
         }
